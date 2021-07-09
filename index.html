@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+<title>STOCK MARKET PH CALCULATOR</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<style>
+	body {
+		margin: 0px;
+		background-color: black;
+	}
+	#border {
+		border: 1px solid white;
+		box-sizing: border-box;
+	}
+	#canvas div {		
+		position: absolute;
+		background-repeat: no-repeat;
+		background-color: transparent;
+		background-size: contain;
+	}
+	#canvas {
+		left: 0px;
+		top: 0px; 
+		right: 0px; 
+		bottom: 0px;
+		margin: auto;
+		position: absolute;
+		visibility: hidden;
+		width: 600px;
+		height: 600px;
+		overflow: hidden;
+		background-color: #ffffff;
+		text-align: center;
+		font-size: 14px;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	#canvas .fullscreen { 
+		width: 100%;
+		height: 100%;
+	}
+	#canvas .unclickable { 
+		pointer-events: none; 
+		-webkit-user-select: none; /* Safari */
+  		-ms-user-select: none; /* IE 10 and IE 11 */
+  		user-select: none; /* Standard syntax */
+	}
+	#canvas .button { 
+		cursor: pointer;
+	}	
+	#canvas #cta { 
+		/* background-image: url(cta.png); */
+	}
+	#canvas #btn_cta {		
+		bottom: 0px;
+		right: 0px;
+		width: 100px;
+		height: 50px;
+	}
+	#canvas .scene { 
+		opacity: 0;
+	}
+
+</style>
+</head>
+<body>
+
+<div id="canvas">
+	STOCK MARKET PH CALCULATOR
+	<div id="scene_1" class="fullscreen unclickable scene">
+		<!-- add creatives here -->
+	</div>
+	<div id="cta" class="fullscreen unclickable"></div>
+	<div id="btn_background" class="fullscreen button"></div>
+	<div id="btn_cta" class="button"></div>
+	<div id="border" class="fullscreen unclickable"></div>
+	<!-- <div style="background-image: url(guide.jpg); opacity: 0.3;" class="fullscreen unclickable"></div> -->
+</div>
+
+<script>
+(function () {
+	
+CSSPlugin.defaultTransformPerspective = 1000;
+/* gsap.ticker.lagSmoothing(false); //continues animation when a tab is inactive */
+
+//Declarations
+var canvas 			= document.getElementById("canvas"),
+	btn_background 	= document.getElementById("btn_background"),
+	btn_cta 		= document.getElementById("btn_cta"),
+	cta 			= document.getElementById("cta"),
+	canvas_w 		= canvas.offsetWidth,
+	canvas_h 		= canvas.offsetHeight,
+	clickTag 		= "https://www.google.com/",
+	clickTag1 		= "https://www.yahoo.com/",
+
+init = function() {
+	canvas.style.visibility = "visible";
+	let master = gsap.timeline({delay:0.25})
+		.add(scene_1())
+		.add(scene_2());
+},
+
+//Animations
+scene_1 = function() {
+	let tl = gsap.timeline();
+	/* tl.set("#scene_1", {opacity:1})
+	  .to("#id", 1, {ease:"power2.InOut"}); */
+	return tl;
+},
+
+scene_2 = function() {
+	let tl = gsap.timeline();
+	/* tl.set("#scene_2", {opacity:1})
+	  .to("#id", 1, {ease:"power2.InOut"}); */
+	return tl;
+};
+
+//Interactions
+btn_cta.onmouseover = function() {
+
+}
+btn_cta.onmouseout = function() {
+
+}
+btn_background.onclick = function() {
+	window.open(clickTag, "_blank");
+}
+btn_cta.onclick = function() {
+	window.open(clickTag1, "_blank");
+}
+window.addEventListener("load", init);
+
+})();
+</script>
+
+</body>
+</html>
