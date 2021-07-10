@@ -1,0 +1,100 @@
+html, body { height: 100%; width: 100%; margin: 0; padding: 0; background-color: black; }
+div { position: absolute; background-repeat: no-repeat;  }
+.fullscreen { width: 100%; height: 100%; }
+.center { margin: auto; top: 0; left: 0; right: 0; bottom: 0; }
+.centerX { margin: auto; left: 0; right: 0; }
+.centerY { margin: auto; top: 0; bottom: 0; }
+
+*:focus { outline: none; }
+
+#background {
+    width: 100%;
+    height: 100%;
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#container {
+    visibility: hidden;
+    width: 720px;
+    height: 1280px;
+    border: 2px solid red;
+    pointer-events: none;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.7);
+}
+
+#container #header {
+    top:50px;
+    text-align: center;
+    width: 100%;
+    color:aqua;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+#container #subheader {
+    color:#00bebe;
+    font-size: 18px;
+}
+
+#container .txt_input {
+    text-align: center;
+    width: 80%;
+    height: 80px;
+    color:white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+#container .inputbox {
+    width: 100%;
+    height: 100%;
+    color:black;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#container #share { top:150px; }
+#container #buyprice { top:300px; }
+#container #sellprice { top:600px; }
+
+
+#container .txt_output {
+    text-align: center;
+    width: 100%;
+    height: 105px;
+    color:white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 45px;
+    background-color: darkslategrey;
+}
+
+#container #totalamountpaid { top:470px; }
+#container #totalamountreceived { top:770px; }
+#container #gainlost { top:900px; /* background: darky; */ }
+
+#container .outputbox {
+    width: 100%;
+    height: 100%;
+    color:white;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/*** Portrait ****/
+@media only screen and (orientation: portrait) {
+    /* #container { width: 100%; height:100% } */
+}

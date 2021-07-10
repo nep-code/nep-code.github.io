@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+		<title>Philippine Stock Market Calculator</title>
+		<link rel="stylesheet" href="styles.css">
+		<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+	</head>
+	<body>
+		<div id="background"></div>
+		<div id="container" class="center">
+			<div id="header" class="centerX">
+				PH STOCK MARKET CALCULATOR<br>
+				<span id="subheader">Col-Financial, Philstocks, AB, CAP, BPI, AAA, FMS</span>
+			</div>
+
+			<div id="share" class="txt_input centerX">
+				No. of Shares
+				<input id="i_share" class="inputbox" type="number"/>
+			</div>
+			<div id="buyprice" class="txt_input centerX">
+				Buy Price
+				<input id="i_buyprice" class="inputbox" type="number"/>
+			</div>
+			<div id="sellprice" class="txt_input centerX">
+				Sell Price
+				<input id="i_sellprice" class="inputbox" type="number"/>
+			</div>
+
+			<div id="totalamountpaid" class="txt_output centerX">
+				total amount paid
+				<div id="o_totalamountpaid" class="outputbox centerX">₱ 0.00</div>
+			</div>
+			
+			<div id="totalamountreceived" class="txt_output centerX">
+				total amount received
+				<div id="o_totalamountreceived" class="outputbox centerX">₱ 0.00</div>
+			</div>
+			
+
+			<div id="gainlost" class="txt_output centerX">
+				gain / lost
+				<div id="o_gainlost" class="outputbox centerX">₱ 0.00</div>
+			</div>
+
+		</div>
+		<script src="logic.js"></script>
+	</body>
+</html>
