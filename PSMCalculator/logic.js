@@ -92,7 +92,10 @@ const PSMCalculator = (function() {
             scale_w     = Math.abs(window_w / container_w),
             scale_h     = Math.abs(window_h / container_h);
         if(window_w > window_h) { gsap.set(container, {scale:scale_h}); }
-        /* else gsap.set(container, {scale:scale_w}); */
+        else {
+            if(container_w > window_w) gsap.set(container, {scale:scale_h});
+            else gsap.set(container, {scale:scale_w});
+        }
     };
 
     return {
